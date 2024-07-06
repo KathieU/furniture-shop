@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main-content {
+  padding-top: 5rem; /* Base padding for the navbar height */
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 4rem; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding-top: 3rem; /* Adjust padding for mobile devices */
+  }
+}
