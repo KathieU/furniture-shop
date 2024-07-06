@@ -1,4 +1,4 @@
-.product-listing {
+/* .product-listing {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -32,4 +32,106 @@
   .product {
     width: calc(100% - 2rem);
   }
+} */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.product-listing-page {
+  display: flex;
+  padding: 20px;
+}
+
+.filter-options {
+  width: 20%;
+  margin-right: 20px;
+}
+
+.filter-options h3 {
+  margin-bottom: 10px;
+}
+
+.filter-options ul {
+  list-style: none;
+  padding: 0;
+}
+
+.filter-options li {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.filter-price input {
+  width: 100%;
+}
+
+.color-options {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.color-option {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  cursor: pointer;
+  border: 1px solid #000;
+}
+
+.product-list {
+  width: 80%;
+}
+
+.sort-by {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.sort-by label {
+  margin-right: 10px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product-card {
+  width: calc(33.333% - 20px);
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-card .discount {
+  background-color: #f00;
+  color: #fff;
+  padding: 2px 5px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.product-card h4 {
+  margin: 10px 0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination span {
+  margin: 0 5px;
+  cursor: pointer;
 }
