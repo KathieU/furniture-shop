@@ -1,35 +1,3 @@
-// import { useEffect, useState } from "react";
-// import "./ProductListing.css";
-// import Banner from "../../components/Banner/Banner";
-
-// function ProductListing() {
-//   const [products, setProducts] = useState([]);
-
-//   useEffect(() => {
-//     fetch("/products.json")
-//       .then((response) => response.json())
-//       .then((data) => setProducts(data))
-//       .catch((error) => console.error("Error fetching products:", error));
-//   }, []);
-
-//   return (
-//     <div>
-//       <Banner title="ProductListing" />
-//       <div className="product-listing">
-//         {products.map((product) => (
-//           <div key={product.id} className="product">
-//             <img src={product.image} alt={product.name} />
-//             <h2>{product.name}</h2>
-//             <p>{product.description}</p>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default ProductListing;
-
 import products from "./products";
 import "./ProductListing.css";
 import Banner from "../../components/Banner/Banner";
@@ -40,49 +8,92 @@ const ProductListingPage = () => {
       <Banner title="Product Catalog" />
       <div className="product-listing-page">
         <aside className="filter-options">
-          <div className="filter-category">
+          <h3>Filter Options</h3>
+          <div className="filter filter-category">
             <h3>Product Category</h3>
-            <ul>
-              <li>All</li>
-              <li>Chairs</li>
-              <li>Tables</li>
-              <li>Sofas</li>
-              <li>Lights</li>
-            </ul>
+            <div className="button-list">
+              <button className="filter-all">All</button>
+              <button>Chairs</button>
+              <button>Sofas</button>
+              <button>Tables</button>
+              <button>Beds</button>
+              <button>Others</button>
+            </div>
           </div>
-          <div className="filter-material">
+          <div className="filter filter-material">
             <h3>Material</h3>
-            <ul>
-              <li>All</li>
-              <li>Leather</li>
-              <li>Fabric</li>
-              <li>Wood</li>
-              <li>Plastic</li>
-            </ul>
+            <div className="button-list">
+              <button className="filter-all">All</button>
+              <button>Leather</button>
+              <button>Plastic</button>
+              <button>Acrylic</button>
+              <button>Wood</button>
+              <button>Plastic</button>
+            </div>
           </div>
-          <div className="filter-price">
+          <div className="filter filter-price">
             <h3>Price</h3>
-            <input type="range" min="0" max="50000" />
+            <p>₦100,000 - ₦500,000 </p>
+            <input type="range" min="0" max="500000" />
           </div>
-          <div className="filter-color">
-            <h3>Color</h3>
+          <div className="filter filter-color">
+            <h3>Colors</h3>
             <div className="color-options">
               <div
                 className="color-option"
-                style={{ backgroundColor: "#000" }}
+                style={{ backgroundColor: "#1E1E1E" }}
               ></div>
               <div
                 className="color-option"
-                style={{ backgroundColor: "#fff" }}
+                style={{
+                  backgroundColor: "#F8F9FA",
+                  border: "1px solid #1E1E1E33",
+                }}
               ></div>
               <div
                 className="color-option"
-                style={{ backgroundColor: "#f00" }}
+                style={{ backgroundColor: "#B043F2" }}
               ></div>
-              {/* Add more color options as needed */}
+              <div
+                className="color-option"
+                style={{ backgroundColor: "#BA7C34" }}
+              ></div>
+              <div
+                className="color-option"
+                style={{ backgroundColor: "#F970BA" }}
+              ></div>
+              <div
+                className="color-option"
+                style={{ backgroundColor: "#C0BCBC" }}
+              ></div>
+              <div
+                className="color-option"
+                style={{ backgroundColor: "#82F3A8" }}
+              ></div>
+              <div
+                className="color-option"
+                style={{ backgroundColor: "#84AAF4" }}
+              ></div>
+              <div
+                className="color-option"
+                style={{ backgroundColor: "#FFE794" }}
+              ></div>
+              <div
+                className="color-option"
+                style={{ backgroundColor: "#FC0725" }}
+              ></div>
+              <div
+                className="color-option"
+                style={{ backgroundColor: "#F1D4FB" }}
+              ></div>
+              <div
+                className="color-option"
+                style={{ backgroundColor: "#BBE2F3" }}
+              ></div>
             </div>
           </div>
         </aside>
+
         <main className="product-list">
           <div className="sort-by">
             <label>Sort by:</label>

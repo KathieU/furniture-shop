@@ -55,10 +55,16 @@ footer {
   height: 100%;
   background-color: transparent;
   margin-bottom: 0;
+  font-size: 1.125rem;
+
   /* padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center; */
+}
+
+input:focus {
+  outline: none;
 }
 
 .newsletter-form button {
