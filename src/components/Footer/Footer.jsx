@@ -1,18 +1,25 @@
 import { Link } from "react-router-dom";
 import "./Footer.css";
+import footerChair from "../../assets/footerChair.png";
 
 const Footer = () => {
   return (
     <footer>
       <div className="newsletter-section">
-        <h2>Subscribe To Our Newsletter</h2>
-        <p>
-          Join our family by subscribing to our newsletter for daily updates.
-        </p>
-        <form className="newsletter-form">
-          <input type="email" placeholder="nola17@gmail.com" />
-          <button type="submit">Subscribe</button>
-        </form>
+        <div className="newsletter-subscribe">
+          <div className="newsletter-text">
+            <h2>Subscribe To Our Newsletter</h2>
+            <p>
+              Join our family by subscribing to our newsletter for daily
+              updates.
+            </p>
+          </div>
+          <form className="newsletter-form">
+            <input type="email" placeholder="nola17@gmail.com" />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+        <img src={footerChair} alt="lady in a chair" />
       </div>
       <div className="footer-content">
         <div className="footer-left">

@@ -37,7 +37,7 @@ import Banner from "../../components/Banner/Banner";
 const ProductListingPage = () => {
   return (
     <div>
-      <Banner title="Products Listing" />
+      <Banner title="Product Catalog" />
       <div className="product-listing-page">
         <aside className="filter-options">
           <div className="filter-category">

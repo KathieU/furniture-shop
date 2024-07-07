@@ -2,39 +2,38 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff4e1;
-  padding: 40px 20px;
+  background-color: #fff7ee;
+  color: #1e1e1e;
+  height: 17rem;
+  padding-left: 7.5rem;
+  padding-right: 7.5rem;
   position: relative;
+  z-index: -1;
 }
 
 .banner-content {
   text-align: center;
-  z-index: 1;
 }
 
 .banner-content h1 {
-  font-size: 2em;
-  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 .banner-content p {
-  font-size: 1em;
-  margin: 10px 0 0;
+  font-weight: 500;
+}
+
+.banner-content .banner-subtitle {
+  opacity: 70%;
 }
 
 .banner-content a {
   text-decoration: none;
-  color: #000;
   font-weight: bold;
 }
 
 .banner-image {
   position: absolute;
-  right: 20px;
-  bottom: 0;
-}
-
-.banner-image img {
-  max-width: 150px;
-  max-height: 200px;
+  right: 0rem;
 }

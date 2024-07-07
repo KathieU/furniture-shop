@@ -1,20 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
 * {
   margin: 0;
   padding: 0;
+  font-family: "Nunito", sans-serif;
+  /* color: #1e1e1e; */
 }
 
 .main-content {
-  padding-top: 5rem; /* Base padding for the navbar height */
+  padding-top: 8.25rem; /* Base padding for the navbar height */
 }
 
 @media (max-width: 768px) {
   .main-content {
-    padding-top: 4rem; /* Adjust padding for smaller screens */
+    padding-top: 4rem;
   }
 }
 
 @media (max-width: 480px) {
   .main-content {
-    padding-top: 3rem; /* Adjust padding for mobile devices */
+    padding-top: 3rem;
   }
 }

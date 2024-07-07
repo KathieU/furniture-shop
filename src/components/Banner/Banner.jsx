@@ -1,17 +1,18 @@
 import PropTypes from "prop-types";
 import "./Banner.css";
+import bannerChair from "../../assets/bannerChair.png";
 
-const Banner = ({ title, subtitle, linkText, link }) => {
+const Banner = ({ title, subtitle }) => {
   return (
     <div className="banner">
       <div className="banner-content">
         <h1>{title}</h1>
         <p>
-          <a href={link}>{linkText}</a> / {subtitle}
+          Shop /<span className="banner-subtitle">All products {subtitle}</span>
         </p>
       </div>
       <div className="banner-image">
-        <img src="chair-image.png" alt="Chair" />
+        <img src={bannerChair} alt="Chair" />
       </div>
     </div>
   );

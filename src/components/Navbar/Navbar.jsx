@@ -19,6 +19,7 @@ const Navbar = () => {
           </Link>
           <Link to="/account">
             <i className="fas fa-user"></i>
+            {/* <img src="../../assets/icons/profile.png" /> */}
           </Link>
         </div>
       </div>
@@ -30,7 +31,7 @@ const Navbar = () => {
             <li>
               <Link to="/">Home</Link>
             </li>
-            <li>
+            <li className="shop-style">
               <Link to="/cart">Shop</Link>
             </li>
             <li>
