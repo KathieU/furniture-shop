@@ -102,37 +102,109 @@ select:focus {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 2rem;
   width: 100%;
 }
 
 .product-card {
+  display: flex;
+  flex-direction: column;
   width: 30%;
-
-  text-align: center;
-  /* display: grid;
-  grid-column: 3; */
+  gap: 1rem;
+  position: relative;
 }
 
+.product-card-image {
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  background-color: #f8f9fa;
+}
+
+.product-card-image:hover {
+  cursor: pointer;
+  background-color: #1e1e1e;
+}
 .product-card img {
   max-width: 100%;
   height: auto;
 }
 
+.product-card:hover {
+  .discount {
+    background-color: #ffffff;
+    color: #1e1e1e;
+  }
+}
 .product-card .discount {
-  background-color: #f00;
-  color: #fff;
-  padding: 2px 5px;
+  background-color: #ba7c34;
+  color: #f8f9fa;
+  padding: 8px;
   position: absolute;
   top: 10px;
   left: 10px;
+  border-radius: 20px;
+}
+/* Initially hide the add to cart button */
+.add-cart {
   display: none;
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 8px;
+  background-color: #ba7c34;
+  color: white;
+  border: none;
+  border-radius: 18px;
+  width: 80%;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 10;
+  text-decoration: none;
 }
 
+.product-card-image:hover .add-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
 .product-card h4 {
-  margin: 10px 0;
+  font-size: 24px;
+  font-weight: 600;
 }
 
+.ellipsis-text {
+  width: 100%;
+  max-width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.price-wish {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.main-price {
+  font-size: 20px;
+}
+
+.discount-price {
+  font-size: 18px;
+  opacity: 60%;
+  text-decoration: line-through;
+}
+
+.price-wish button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
 .pagination {
   display: flex;
   justify-content: center;

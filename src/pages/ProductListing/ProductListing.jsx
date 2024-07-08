@@ -1,8 +1,21 @@
 import products from "./products";
 import "./ProductListing.css";
 import Banner from "../../components/Banner/Banner";
+import heartIcon from "../../assets/icons/heartIcon.png";
+import redHeartIcon from "../../assets/icons/redHeartIcon.png";
+import cartIcon from "../../assets/icons/cartIcon.png";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const ProductListingPage = () => {
+  const [clickedHearts, setClickedHearts] = useState({});
+
+  const handleClick = (productId) => {
+    setClickedHearts((prevState) => ({
+      ...prevState,
+      [productId]: !prevState[productId],
+    }));
+  };
   return (
     <div>
       <Banner title="Product Catalog" />
@@ -109,12 +122,33 @@ const ProductListingPage = () => {
                 {product.discount && (
                   <div className="discount">{product.discount}</div>
                 )}
-                <img src={product.image} alt={product.name} />
+                <div className="product-card-image">
+                  <img src={product.image} alt={product.name} />
+
+                  {/* <button className="add-cart"> */}
+                  <Link to="/cart" className="add-cart">
+                    Add to cart <img src={cartIcon} alt="Cart Icon" />
+                  </Link>
+                  {/* </button> */}
+                </div>
 
                 <div className="product-card-details">
-                  <h4>{product.name}</h4>
-                  <p>{product.price}</p>
-                  <button>Add to cart</button>
+                  <h4 className="ellipsis-text">{product.name}</h4>
+                  <div className="price-wish">
+                    <div className="product-price">
+                      <p className="main-price">{product.price}</p>
+                      <p className="discount-price">{product.discountPrice}</p>
+                    </div>
+
+                    <button onClick={() => handleClick(product.id)}>
+                      <img
+                        src={
+                          clickedHearts[product.id] ? redHeartIcon : heartIcon
+                        }
+                        alt="Heart icon"
+                      />
+                    </button>
+                  </div>
                 </div>
               </div>
             ))}

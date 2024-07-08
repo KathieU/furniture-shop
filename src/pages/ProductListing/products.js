@@ -15,6 +15,7 @@ const products = [
     price: "₦12,000",
     image: chairImage,
     discount: "-10%",
+    discountPrice: "₦10,000",
   },
   {
     id: 2,
