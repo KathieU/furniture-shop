@@ -112,6 +112,7 @@ select:focus {
   width: 30%;
   gap: 1rem;
   position: relative;
+  margin-bottom: 1rem;
 }
 
 .product-card-image {
@@ -145,7 +146,7 @@ select:focus {
   left: 10px;
   border-radius: 20px;
 }
-/* Initially hide the add to cart button */
+
 .add-cart {
   display: none;
   position: absolute;
@@ -207,11 +208,43 @@ select:focus {
 }
 .pagination {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: center;
   margin-top: 20px;
+  font-size: 20px;
+  gap: 1rem;
 }
 
 .pagination span {
-  margin: 0 5px;
   cursor: pointer;
+}
+
+.previous {
+  opacity: 60%;
+}
+.page-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #f8f9fa;
+  border-radius: 50%;
+}
+
+.page-number:hover,
+.active {
+  background-color: #ba7c34;
+  color: #ffffff;
+}
+
+.next:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 3rem;
+  color: #ffffff;
+  background-color: #ba7c34;
+  border-radius: 50%;
 }

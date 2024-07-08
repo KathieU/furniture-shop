@@ -125,11 +125,9 @@ const ProductListingPage = () => {
                 <div className="product-card-image">
                   <img src={product.image} alt={product.name} />
 
-                  {/* <button className="add-cart"> */}
                   <Link to="/cart" className="add-cart">
                     Add to cart <img src={cartIcon} alt="Cart Icon" />
                   </Link>
-                  {/* </button> */}
                 </div>
 
                 <div className="product-card-details">
@@ -155,11 +153,14 @@ const ProductListingPage = () => {
           </div>
 
           <div className="pagination">
-            <span>Prev</span>
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>Next</span>
+            <span className="previous">Prev</span>
+            <span className="page-number active">1</span>
+            <span className="page-number">2</span>
+            <span className="page-number">3</span>
+            <span className="page-number">4</span>
+            <span>...</span>
+            <span className="page-number">25</span>
+            <span className="next">Next</span>
           </div>
         </main>
       </div>
