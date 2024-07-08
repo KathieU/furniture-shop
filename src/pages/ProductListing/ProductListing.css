@@ -83,6 +83,10 @@
   border-radius: 50%;
 }
 
+.color-option:hover {
+  border: 1px solid black;
+}
+
 .product-list {
   width: 70%;
 }
