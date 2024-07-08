@@ -4,10 +4,23 @@ import Banner from "../../components/Banner/Banner";
 import heartIcon from "../../assets/icons/heartIcon.png";
 import redHeartIcon from "../../assets/icons/redHeartIcon.png";
 import cartIcon from "../../assets/icons/cartIcon.png";
+import upArrow from "../../assets/icons/upArrow.png";
+import downArrow from "../../assets/icons/downArrow.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const ProductListingPage = () => {
+  const [toggledCategory, setToggledCategory] = useState(false);
+  const [toggledMaterial, setToggledMaterial] = useState(false);
+
+  const handleToggleCategory = () => {
+    setToggledCategory(!toggledCategory);
+  };
+
+  const handleToggleMaterial = () => {
+    setToggledMaterial(!toggledMaterial);
+  };
+
   const [clickedHearts, setClickedHearts] = useState({});
 
   const handleClick = (productId) => {
@@ -23,26 +36,44 @@ const ProductListingPage = () => {
         <aside className="filter-options">
           <h3>Filter Options</h3>
           <div className="filter filter-category">
-            <h3>Product Category</h3>
-            <div className="button-list">
-              <button className="filter-all">All</button>
-              <button>Chairs</button>
-              <button>Sofas</button>
-              <button>Tables</button>
-              <button>Beds</button>
-              <button>Others</button>
+            <div className="filter-dropdown">
+              <h3>Product Category</h3>
+              <img
+                src={toggledCategory ? downArrow : upArrow}
+                alt="arrow"
+                onClick={handleToggleCategory}
+              />
             </div>
+            {!toggledCategory && (
+              <div className="button-list">
+                <button className="filter-all">All</button>
+                <button>Chairs</button>
+                <button>Sofas</button>
+                <button>Tables</button>
+                <button>Beds</button>
+                <button>Others</button>
+              </div>
+            )}
           </div>
           <div className="filter filter-material">
-            <h3>Material</h3>
-            <div className="button-list">
-              <button className="filter-all">All</button>
-              <button>Leather</button>
-              <button>Plastic</button>
-              <button>Acrylic</button>
-              <button>Wood</button>
-              <button>Plastic</button>
+            <div className="filter-dropdown">
+              <h3>Material</h3>
+              <img
+                src={toggledMaterial ? downArrow : upArrow}
+                alt="arrow"
+                onClick={handleToggleMaterial}
+              />
             </div>
+            {!toggledMaterial && (
+              <div className="button-list">
+                <button className="filter-all">All</button>
+                <button>Leather</button>
+                <button>Plastic</button>
+                <button>Acrylic</button>
+                <button>Wood</button>
+                <button>Plastic</button>
+              </div>
+            )}
           </div>
           <div className="filter filter-price">
             <h3>Price</h3>
