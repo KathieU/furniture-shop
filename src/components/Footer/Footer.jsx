@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import "./Footer.css";
+import "../../App.css";
 import footerChair from "../../assets/footerChair.png";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="main-container">
       <div className="newsletter-section">
         <div className="newsletter-subscribe">
           <div className="newsletter-text">

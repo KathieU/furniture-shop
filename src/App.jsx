@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <div className="main-content">
+      <div className="main-container main-content">
         <Routes>
           <Route path="/" element={<ProductListing />} />
           <Route path="/cart" element={<Cart />} />
