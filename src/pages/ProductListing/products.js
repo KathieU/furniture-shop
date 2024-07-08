@@ -3,7 +3,8 @@ const products = [
     id: 1,
     name: "Wooden Chair with leather",
     price: "₦12,000",
-    image: "path/to/image1.jpg",
+    image: "../../assets/productImages/chair.png",
+    hoverImage: "../../assets/productImages/chairHover.png",
     discount: "-10%",
   },
   {

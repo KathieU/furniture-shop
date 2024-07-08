@@ -99,8 +99,8 @@ const ProductListingPage = () => {
             <label>Sort by:</label>
             <select>
               <option value="default">Default</option>
-              <option value="price-asc">Price: Low to High</option>
-              <option value="price-desc">Price: High to Low</option>
+              <option value="price-asc">Low price</option>
+              <option value="price-desc">High price</option>
             </select>
           </div>
           <div className="products">
@@ -110,12 +110,25 @@ const ProductListingPage = () => {
                   <div className="discount">{product.discount}</div>
                 )}
                 <img src={product.image} alt={product.name} />
+                {/* <div className="image-container">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="default"
+                  />
+                  <img
+                    src={product.hoverImage}
+                    alt={product.name}
+                    className="hover"
+                  />
+                </div> */}
                 <h4>{product.name}</h4>
                 <p>{product.price}</p>
                 <button>Add to cart</button>
               </div>
             ))}
           </div>
+
           <div className="pagination">
             <span>Prev</span>
             <span>1</span>
