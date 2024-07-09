@@ -35,13 +35,14 @@ footer {
 }
 
 .newsletter-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border: 1px solid #1e1e1e;
   border-radius: 40px;
+  border-right: none;
   width: 75%;
   height: 3.75rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .newsletter-form input[type="email"] {
@@ -104,7 +105,10 @@ input:focus {
   gap: 0.5rem;
   font-style: normal;
 }
-
+address p {
+  display: flex;
+  gap: 1rem;
+}
 .footer-right {
   display: flex;
   gap: 4rem;

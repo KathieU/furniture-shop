@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import "./Footer.css";
 import "../../App.css";
 import footerChair from "../../assets/footerChair.png";
+import locationIcon from "../../assets/icons/locationIcon.png";
+import phoneIcon from "../../assets/icons/phoneIcon.png";
+import emailIcon from "../../assets/icons/emailIcon.png";
 
 const Footer = () => {
   return (
@@ -31,9 +34,18 @@ const Footer = () => {
             help upgrade your space.
           </p>
           <address>
-            <p>12 Platinum Way, Lekki, Lagos</p>
-            <p>+234 7091363071</p>
-            <p>support@furniture.ng</p>
+            <p>
+              <img src={locationIcon} alt="Location icon" /> 12 Platinum Way,
+              Lekki, Lagos
+            </p>
+            <p>
+              <img src={phoneIcon} alt="Location icon" />
+              +234 7091363071
+            </p>
+            <p>
+              <img src={emailIcon} alt="Location icon" />
+              support@furniture.ng
+            </p>
           </address>
         </div>
         <div className="footer-right">

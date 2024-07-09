@@ -90,6 +90,31 @@ const Cart = () => {
             ))}
           </tbody>
         </table>
+        <div className="cart-items">
+          {cart.map((item) => (
+            <div key={item.id} className="cart-item">
+              <img src={item.image} alt={item.name} />
+              <div className="cart-item-details">
+                <p className="cart-item-name">{item.name}</p>
+                <p className="cart-item-price">
+                  ₦{item.price.toLocaleString()}
+                </p>
+                <div className="cart-item-quantity">
+                  <button onClick={() => updateQuantity(item.id, -1)}>-</button>
+                  <span>{item.quantity}</span>
+                  <button onClick={() => updateQuantity(item.id, 1)}>+</button>
+                </div>
+                <p className="cart-item-subtotal">
+                  Subtotal: ₦
+                  {calculateSubtotal(
+                    item.price,
+                    item.quantity
+                  ).toLocaleString()}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
         <div className="cart-summary">
           <div className="promo">
             <h3>Promo/Coupon Code</h3>
