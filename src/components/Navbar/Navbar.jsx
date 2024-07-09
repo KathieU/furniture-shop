@@ -3,7 +3,7 @@ import "./Navbar.css";
 import "../../App.css";
 import searchIcon from "../../assets/icons/searchIcon.png";
 import plainHeartIcon from "../../assets/icons/heart.png";
-import cartIcon from "../../assets/icons/cartIcon.png";
+import loadedCartIcon from "../../assets/icons/loadedCartIcon.png";
 import profile from "../../assets/icons/profile.png";
 import brownProfile from "../../assets/icons/brownProfile.png";
 import brownSearch from "../../assets/icons/brownSearch.png";
@@ -53,7 +53,7 @@ const Navbar = () => {
           <Link to="/cart">
             <img
               className="icon"
-              src={cartIcon}
+              src={loadedCartIcon}
               alt="Cart icon"
               data-hover={brownCart}
             />
