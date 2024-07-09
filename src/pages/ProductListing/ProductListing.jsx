@@ -34,7 +34,7 @@ const ProductListingPage = () => {
       <Banner title="Product Catalog" />
       <div className="product-listing-page">
         <aside className="filter-options">
-          <h3>Filter Options</h3>
+          <h3 className="filter-title">Filter Options</h3>
           <div className="filter filter-category">
             <div className="filter-dropdown">
               <h3>Product Category</h3>

@@ -33,7 +33,7 @@ const Navbar = () => {
       <div className="top-bar">
         <p>Sign in to our app to start shopping</p>
 
-        <div className="nav-icons">
+        <div className="nav-icons ">
           <Link to="/search">
             <img
               className="icon"
