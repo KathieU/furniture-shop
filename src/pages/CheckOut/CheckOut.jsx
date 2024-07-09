@@ -3,6 +3,10 @@ import Banner from "../../components/Banner/Banner";
 import { useState } from "react";
 import paypal from "../../assets/icons/paypal.png";
 import visa from "../../assets/icons/visa.png";
+import armChair from "../../assets/productImages/armChair.png";
+import lights from "../../assets/productImages/lights.png";
+import greenSofa from "../../assets/productImages/greenSofa.png";
+import { Link } from "react-router-dom";
 
 const CheckOut = () => {
   const [formData, setFormData] = useState({
@@ -29,6 +33,41 @@ const CheckOut = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
+
+  const cartItems = [
+    {
+      id: 1,
+      name: "Brown Soft Cushion Armchair",
+      price: 125000,
+      quantity: 1,
+      image: armChair,
+    },
+    {
+      id: 2,
+      name: "Gold Ceiling Lights",
+      price: 98000,
+      quantity: 2,
+      image: lights,
+    },
+    {
+      id: 3,
+      name: "Green Modern Day Sofa",
+      price: 122000,
+      quantity: 1,
+      image: greenSofa,
+    },
+  ];
+
+  const calculateTotal = () => {
+    return cartItems.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    );
+  };
+
+  const discount = 18350;
+  const deliveryFee = 5000;
+  const estimatedTotal = calculateTotal() - discount + deliveryFee;
   return (
     <div>
       <Banner title="Check Out" subtitle="/ Cart" />
@@ -205,30 +244,40 @@ const CheckOut = () => {
         <div className="order-summary">
           <h2>Order Summary</h2>
           <div className="order-items">
-            <div className="order-item">
-              <img src="path/to/image1.jpg" alt="Product 1" />
-              <p>Brown Soft Cushion Armchair</p>
-              <p>₦125,000</p>
-            </div>
-            <div className="order-item">
-              <img src="path/to/image2.jpg" alt="Product 2" />
-              <p>Gold Ceiling Lights</p>
-              <p>₦98,000</p>
-            </div>
-            <div className="order-item">
-              <img src="path/to/image3.jpg" alt="Product 3" />
-              <p>Green Modern Day Sofa</p>
-              <p>₦122,000</p>
-            </div>
+            {cartItems.map((item) => (
+              <div key={item.id} className="order-item">
+                <img src={item.image} alt={item.name} />
+                <div className="order-item-text">
+                  <h3>{item.name}</h3>
+                  <p>₦{item.price.toLocaleString()}</p>
+                  <div className="quantity">{item.quantity}</div>
+                </div>
+              </div>
+            ))}
           </div>
-          <div className="order-total">
-            <p>Total: ₦443,000</p>
-            <p>Discount: -₦18,350</p>
-            <p>Pick-up delivery: ₦5,000</p>
-            <h3>Estimated Total: ₦429,650</h3>
+          <div className="order-totals">
+            <p>
+              Total{" "}
+              <span className="bold">₦{calculateTotal().toLocaleString()}</span>
+            </p>
+            <p>
+              Discount{" "}
+              <span className="bold">-₦{discount.toLocaleString()}</span>
+            </p>
+            <p>
+              Pick up delivery{" "}
+              <span className="bold">₦{deliveryFee.toLocaleString()}</span>
+            </p>
+            <h3 className="bold">
+              Estimated Total{" "}
+              <span className="bolder">₦{estimatedTotal.toLocaleString()}</span>
+            </h3>
           </div>
-          <button className="checkout-button">Make Payment</button>
-          <button className="edit-cart-button">Edit Cart</button>
+
+          <button className="payment-button">Make Payment</button>
+          <button className="edit-cart-button">
+            <Link to="/cart">Edit Cart</Link>
+          </button>
         </div>
       </div>
     </div>

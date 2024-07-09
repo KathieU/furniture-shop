@@ -131,11 +131,11 @@ tbody td {
   font-size: 32px;
 }
 
-.totals-price .bold {
+.bold {
   font-weight: 500;
 }
 
-.totals-price .bolder {
+.bolder {
   font-weight: 700;
 }
 .totals button {
