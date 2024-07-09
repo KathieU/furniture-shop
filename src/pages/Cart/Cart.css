@@ -1,6 +1,5 @@
 .cart-page {
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  padding: 2rem 7.5rem;
 }
 
 table {
@@ -10,34 +9,79 @@ table {
 }
 
 thead th {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #1e1e1e3d;
   padding-bottom: 10px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+.product-header {
+  width: 45%;
+}
+tbody td {
+  padding: 1rem 0.5rem;
+  vertical-align: middle;
+  border-bottom: 1px solid #1e1e1e3d;
+  font-size: 28px;
+  text-align: center;
+}
+
+.cart-product {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.cart-product img {
+  background-color: #f8f9fa;
+  width: 12.5rem;
+  height: 11.5rem;
+}
+
+.cart-product p {
+  font-size: 24px;
+  font-weight: 700;
   text-align: left;
 }
 
-tbody td {
-  padding: 15px 10px;
-  vertical-align: middle;
+.cart-quantity button {
+  background-color: #fff7ee;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  text-align: center;
 }
 
-tbody td img {
-  width: 50px;
-  height: auto;
-  margin-right: 10px;
+.cart-quantity button:hover {
+  background-color: #b57224;
+  color: #fff;
 }
 
-tbody td button {
-  padding: 5px 10px;
-  margin: 0 5px;
+.cart-quantity span {
+  margin: auto 1rem;
 }
-
 .cart-summary {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f8f8f8;
-  padding: 20px;
-  border: 1px solid #ddd;
+  border-bottom: 1px solid #1e1e1e3d;
+  height: 12.5rem;
+}
+
+.cart-summary h3 {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 1.5rem;
+}
+.delivery,
+.promo {
+  width: 30%;
+}
+.promo form {
+  width: 100%;
 }
 
 .promo-delivery {
@@ -47,7 +91,7 @@ tbody td button {
 
 .promo input {
   padding: 5px;
-  margin-right: 10px;
+  font-size: 20px;
 }
 
 .promo button {
@@ -55,22 +99,61 @@ tbody td button {
 }
 
 .delivery select {
-  padding: 5px;
+  padding: 8px 24px;
+  height: 64px;
+  width: 100%;
+  font-size: 20px;
 }
 
 .totals {
-  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
-.totals p,
-.totals h3 {
-  margin: 5px 0;
+.totals-content {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
+.totals-price {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+}
+
+.totals-price h3 {
+  font-size: 32px;
+}
+
+.totals-price .bold {
+  font-weight: 500;
+}
+
+.totals-price .bolder {
+  font-weight: 700;
+}
 .totals button {
-  padding: 10px 20px;
+  margin-top: 1rem;
+  height: 64px;
+  padding: 8px;
   background-color: #b57224;
   color: #fff;
   border: none;
   cursor: pointer;
+  border-radius: 18px;
+}
+.totals button:hover {
+  background-color: #a56519;
+}
+.totals button a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
 }

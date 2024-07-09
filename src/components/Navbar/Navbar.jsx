@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import "../../App.css";
+import searchIcon from "../../assets/icons/searchIcon.png";
+import plainHeartIcon from "../../assets/icons/heart.png";
+import cartIcon from "../../assets/icons/cartIcon.png";
+import profile from "../../assets/icons/profile.png";
 
 const Navbar = () => {
   return (
@@ -10,22 +14,28 @@ const Navbar = () => {
 
         <div className="nav-icons">
           <Link to="/search">
-            <i className="fas fa-search"></i>
+            <img src={searchIcon} alt="Search icon" />
+            {/* <i className="fas fa-search"></i> */}
           </Link>
           <Link to="/wishlist">
-            <i className="fas fa-heart"></i>
+            <img src={plainHeartIcon} alt="Heart icon" />
+            {/* <i className="fas fa-heart"></i> */}
           </Link>
           <Link to="/cart">
-            <i className="fas fa-shopping-cart"></i>
+            <img src={cartIcon} alt="Cart icon" />
+            {/* <i className="fas fa-shopping-cart"></i> */}
           </Link>
           <Link to="/account">
-            <i className="fas fa-user"></i>
+            <img src={profile} alt="Profile icon" />
+            {/* <i className="fas fa-user"></i> */}
             {/* <img src="../../assets/icons/profile.png" /> */}
           </Link>
         </div>
       </div>
       <nav className="main-nav">
-        <div className="logo">Furniture.ng</div>
+        <div className="logo">
+          <Link to="/">Furniture.ng</Link>
+        </div>
 
         <nav>
           <ul className="nav-links">
