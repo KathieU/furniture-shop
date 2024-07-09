@@ -61,7 +61,17 @@ header {
   font-weight: 700;
   opacity: 70%;
 }
-
+.nav-links.visible {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 5rem;
+  right: 1rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  z-index: 1000;
+}
 .nav-links a:hover {
   color: #ba7c34;
 }
@@ -86,4 +96,93 @@ header {
 
 .nav-icons a:hover {
   color: #ba7c34;
+}
+
+/* Media Queries for screens up to 991px */
+@media (max-width: 991px) {
+  .top-bar {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .main-nav {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .nav-icons {
+    right: 2rem;
+  }
+}
+
+/* Media Queries for screens up to 768px */
+@media (max-width: 768px) {
+  .top-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .main-nav {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .nav-icons {
+    position: relative;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.visible {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 5rem;
+    right: 1rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    z-index: 1000;
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #1e1e1e;
+  }
+}
+
+/* Media Queries for screens up to 480px */
+@media (max-width: 480px) {
+  .top-bar {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .main-nav {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .logo {
+    font-size: 1.5em;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #1e1e1e;
+  }
 }

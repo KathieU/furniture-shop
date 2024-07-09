@@ -9,9 +9,14 @@ import brownProfile from "../../assets/icons/brownProfile.png";
 import brownSearch from "../../assets/icons/brownSearch.png";
 import brownHeart from "../../assets/icons/brownHeart.png";
 import brownCart from "../../assets/icons/brownCart.png";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
+  const [menuVisible, setMenuVisible] = useState(false);
+
+  const handleToggleMenu = () => {
+    setMenuVisible(!menuVisible);
+  };
   useEffect(() => {
     const icons = document.querySelectorAll(".icon");
 
@@ -74,7 +79,7 @@ const Navbar = () => {
         </div>
 
         <nav>
-          <ul className="nav-links">
+          <ul className={`nav-links ${menuVisible ? "visible" : ""}`}>
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -91,6 +96,9 @@ const Navbar = () => {
               <Link to="/">Blog</Link>
             </li>
           </ul>
+          <div className="menu-icon" onClick={handleToggleMenu}>
+            ☰
+          </div>
         </nav>
       </nav>
     </header>

@@ -157,3 +157,158 @@ tbody td {
   font-weight: 700;
   color: #fff;
 }
+
+/* Media Queries for screens up to 991px */
+@media (max-width: 991px) {
+  .cart-page {
+    padding: 2rem 4rem;
+  }
+
+  thead th {
+    font-size: 20px;
+  }
+
+  tbody td {
+    font-size: 24px;
+  }
+
+  .cart-product img {
+    width: 10rem;
+    height: 9rem;
+  }
+
+  .cart-product p {
+    font-size: 20px;
+  }
+
+  .cart-quantity button {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+
+  .cart-summary {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    gap: 2rem;
+  }
+
+  .promo,
+  .delivery {
+    width: 100%;
+  }
+
+  .promo input,
+  .delivery select {
+    font-size: 18px;
+  }
+
+  .totals-content {
+    width: 60%;
+  }
+}
+
+/* Media Queries for screens up to 768px */
+@media (max-width: 768px) {
+  .cart-page {
+    padding: 2rem;
+  }
+
+  thead th {
+    font-size: 18px;
+  }
+
+  tbody td {
+    font-size: 20px;
+  }
+
+  .cart-product img {
+    width: 8rem;
+    height: 7rem;
+  }
+
+  .cart-product p {
+    font-size: 18px;
+  }
+
+  .cart-quantity button {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+  .cart-summary {
+    align-items: center;
+    text-align: center;
+  }
+
+  .promo,
+  .delivery {
+    width: 100%;
+  }
+
+  .totals-content {
+    width: 80%;
+  }
+}
+
+/* Media Queries for screens up to 480px */
+@media (max-width: 480px) {
+  .cart-page {
+    padding: 1rem;
+  }
+
+  thead th {
+    font-size: 16px;
+  }
+
+  tbody td {
+    font-size: 16px;
+    padding: 0.5rem;
+  }
+
+  .cart-product img {
+    width: 6rem;
+    height: 5rem;
+  }
+
+  .cart-product p {
+    font-size: 16px;
+  }
+
+  .cart-quantity button {
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+  }
+
+  .cart-summary {
+    gap: 1rem;
+  }
+
+  .promo input,
+  .delivery select {
+    font-size: 16px;
+  }
+
+  .totals-content {
+    width: 100%;
+  }
+
+  .totals-price {
+    font-size: 20px;
+  }
+
+  .totals-price h3 {
+    font-size: 24px;
+  }
+
+  .totals button {
+    font-size: 16px;
+  }
+
+  .totals button a {
+    font-size: 16px;
+  }
+}

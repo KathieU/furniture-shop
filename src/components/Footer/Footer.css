@@ -140,3 +140,234 @@ input:focus {
 .footer-column ul li a:hover {
   color: #b57224;
 }
+
+/* Media Queries for screens up to 991px */
+@media (max-width: 991px) {
+  .newsletter-section {
+    padding-left: 4rem;
+    height: 20rem;
+  }
+
+  .newsletter-section h2 {
+    font-size: 2rem;
+  }
+
+  .newsletter-section p {
+    font-size: 1.5rem;
+  }
+
+  .newsletter-form {
+    width: 100%;
+  }
+
+  .newsletter-form button {
+    font-size: 1.25rem;
+    width: 60%;
+  }
+
+  .footer-content {
+    padding: 3rem 4rem;
+  }
+}
+
+/* Media Queries for screens up to 768px */
+@media (max-width: 768px) {
+  .newsletter-section {
+    padding-left: 2rem;
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  .newsletter-subscribe {
+    width: 100%;
+  }
+
+  .newsletter-section img {
+    display: none;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .footer-left {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .footer-right {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Media Queries for screens up to 480px */
+@media (max-width: 480px) {
+  .newsletter-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: auto;
+  }
+
+  .newsletter-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .newsletter-section p {
+    font-size: 1.25rem;
+  }
+
+  .newsletter-form input[type="email"] {
+    font-size: 1rem;
+  }
+
+  .newsletter-form button {
+    font-size: 1.125rem;
+  }
+
+  .footer-content {
+    padding: 1rem;
+  }
+
+  .footer-left h3 {
+    font-size: 2rem;
+  }
+
+  .footer-left p {
+    font-size: 1rem;
+  }
+
+  .footer-column h4 {
+    font-size: 1.25rem;
+  }
+
+  .footer-column ul li a {
+    font-size: 1rem;
+  }
+}
+
+/* Media Queries for screens up to 991px */
+@media (max-width: 991px) {
+  .newsletter-section {
+    padding: 1rem;
+    padding-left: 4rem;
+    height: 20rem;
+  }
+
+  .newsletter-section h2 {
+    font-size: 2rem;
+  }
+
+  .newsletter-section p {
+    font-size: 1.5rem;
+  }
+
+  .newsletter-form {
+    width: 100%;
+  }
+
+  .newsletter-form button {
+    font-size: 1.25rem;
+    width: 60%;
+  }
+
+  .footer-content {
+    padding: 3rem 4rem;
+  }
+}
+
+/* Media Queries for screens up to 768px */
+@media (max-width: 768px) {
+  .newsletter-section {
+    padding-left: 2rem;
+    padding: 1rem;
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  .newsletter-subscribe {
+    width: 100%;
+  }
+
+  .newsletter-section img {
+    display: none;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .footer-left {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .footer-right {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Media Queries for screens up to 480px */
+@media (max-width: 480px) {
+  .newsletter-section {
+    padding: 1rem;
+    height: auto;
+  }
+
+  .newsletter-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .newsletter-section p {
+    font-size: 1.25rem;
+  }
+
+  .newsletter-form input[type="email"] {
+    font-size: 1rem;
+  }
+
+  .newsletter-form button {
+    font-size: 1.125rem;
+  }
+
+  .footer-content {
+    padding: 1rem;
+  }
+
+  .footer-left h3 {
+    font-size: 2rem;
+  }
+
+  .footer-left p {
+    font-size: 1rem;
+  }
+
+  .footer-column h4 {
+    font-size: 1.25rem;
+  }
+
+  .footer-column ul li a {
+    font-size: 1rem;
+  }
+}

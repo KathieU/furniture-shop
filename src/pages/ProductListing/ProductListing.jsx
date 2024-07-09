@@ -29,12 +29,20 @@ const ProductListingPage = () => {
       [productId]: !prevState[productId],
     }));
   };
+
+  const [filterVisible, setFilterVisible] = useState(false);
+
+  const handleToggleFilter = () => {
+    setFilterVisible(!filterVisible);
+  };
   return (
     <div>
       <Banner title="Product Catalog" />
       <div className="product-listing-page">
-        <aside className="filter-options">
-          <h3 className="filter-title">Filter Options</h3>
+        <aside className={`filter-options ${filterVisible ? "visible" : ""}`}>
+          <h3 className="filter-title" onClick={handleToggleFilter}>
+            Filter Options
+          </h3>
           <div className="filter filter-category">
             <div className="filter-dropdown">
               <h3>Product Category</h3>
