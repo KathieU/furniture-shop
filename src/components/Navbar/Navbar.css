@@ -75,6 +75,14 @@ header {
   gap: 1rem;
 }
 
+.nav-icons .icon {
+  transition: 0.3s ease;
+}
+
+.nav-icons .icon:hover {
+  content: attr(data-hover);
+}
+
 .nav-icons a {
   color: #fff !important;
   font-size: 1.2em;

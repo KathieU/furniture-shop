@@ -5,8 +5,29 @@ import searchIcon from "../../assets/icons/searchIcon.png";
 import plainHeartIcon from "../../assets/icons/heart.png";
 import cartIcon from "../../assets/icons/cartIcon.png";
 import profile from "../../assets/icons/profile.png";
+import brownProfile from "../../assets/icons/brownProfile.png";
+import brownSearch from "../../assets/icons/brownSearch.png";
+import brownHeart from "../../assets/icons/brownHeart.png";
+import brownCart from "../../assets/icons/brownCart.png";
+import { useEffect } from "react";
 
 const Navbar = () => {
+  useEffect(() => {
+    const icons = document.querySelectorAll(".icon");
+
+    icons.forEach((icon) => {
+      const originalSrc = icon.src;
+      const hoverSrc = icon.getAttribute("data-hover");
+
+      icon.addEventListener("mouseover", () => {
+        icon.src = hoverSrc;
+      });
+
+      icon.addEventListener("mouseout", () => {
+        icon.src = originalSrc;
+      });
+    });
+  }, []);
   return (
     <header>
       <div className="top-bar">
@@ -14,21 +35,36 @@ const Navbar = () => {
 
         <div className="nav-icons">
           <Link to="/search">
-            <img src={searchIcon} alt="Search icon" />
-            {/* <i className="fas fa-search"></i> */}
+            <img
+              className="icon"
+              src={searchIcon}
+              alt="Search icon"
+              data-hover={brownSearch}
+            />
           </Link>
           <Link to="/wishlist">
-            <img src={plainHeartIcon} alt="Heart icon" />
-            {/* <i className="fas fa-heart"></i> */}
+            <img
+              className="icon"
+              src={plainHeartIcon}
+              alt="Heart icon"
+              data-hover={brownHeart}
+            />
           </Link>
           <Link to="/cart">
-            <img src={cartIcon} alt="Cart icon" />
-            {/* <i className="fas fa-shopping-cart"></i> */}
+            <img
+              className="icon"
+              src={cartIcon}
+              alt="Cart icon"
+              data-hover={brownCart}
+            />
           </Link>
           <Link to="/account">
-            <img src={profile} alt="Profile icon" />
-            {/* <i className="fas fa-user"></i> */}
-            {/* <img src="../../assets/icons/profile.png" /> */}
+            <img
+              className="icon"
+              src={profile}
+              alt="Profile icon"
+              data-hover={brownProfile}
+            />
           </Link>
         </div>
       </div>
