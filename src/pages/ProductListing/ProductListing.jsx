@@ -21,14 +21,6 @@ const ProductListingPage = () => {
     setToggledMaterial(!toggledMaterial);
   };
 
-  // const [selectedColor, setSelectedColor] = useState(null);
-
-  // const colors = ["red", "green", "blue", "yellow", "orange"];
-
-  // const handleColorClick = (color) => {
-  //   setSelectedColor(color);
-  // };
-
   const [clickedHearts, setClickedHearts] = useState({});
 
   const handleClick = (productId) => {
@@ -91,19 +83,6 @@ const ProductListingPage = () => {
           <div className="filter filter-color">
             <h3>Colors</h3>
             <div className="color-options">
-              {/* {colors.map((color) => (
-                <div
-                  key={color}
-                  className={`color-box ${color} ${
-                    selectedColor === color ? "selected" : ""
-                  }`}
-                  onClick={() => handleColorClick(color)}
-                >
-                  {selectedColor === color && (
-                    <span className="check-mark">✔</span>
-                  )}
-                </div>
-              ))} */}
               <div
                 className="color-option"
                 style={{ backgroundColor: "#1E1E1E" }}

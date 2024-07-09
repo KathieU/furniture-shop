@@ -4,10 +4,6 @@
   margin: 0;
   padding: 0;
   font-family: "Nunito", sans-serif;
-
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
 }
 
 .main-container {
@@ -17,7 +13,7 @@
 }
 
 .main-content {
-  padding-top: 8.25rem; /* Base padding for the navbar height */
+  padding-top: 8.25rem;
 }
 
 @media (max-width: 768px) {
