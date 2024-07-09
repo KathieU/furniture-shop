@@ -1,65 +1,102 @@
 .checkout-page {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  padding: 2rem 7.5rem;
+  color: #1e1e1e;
 }
 
 .checkout-form {
-  flex: 2;
-  padding-right: 20px;
+  width: 50%;
 }
-
-h2 {
-  margin-bottom: 10px;
-}
-
-.input-group {
+.checkout-form {
+  width: 50%;
+  margin: 0 auto;
   display: flex;
-  gap: 10px;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-input {
-  padding: 10px;
-  margin-bottom: 10px;
-  width: 100%;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+.checkout-form h2 {
+  font-weight: 700;
+  font-size: 28px;
 }
 
-.full-width {
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-.personal-info,
-.delivery-details,
+.form-row,
 .payment-method {
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.payment-options {
+.form-group {
+  flex: 1;
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  margin-right: 10px;
 }
 
-.payment-options label {
+.form-group:last-child {
+  margin-right: 0;
+}
+
+.form-group label {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 8px;
+  border: 1px solid #1e1e1e5c;
+  font-size: 18px;
+}
+
+.form-group :-ms-input-placeholder {
+  opacity: 60%;
+}
+textarea {
+  resize: vertical;
+}
+
+.payment-method {
   display: flex;
+  justify-content: space-between;
+}
+.payment-style {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 5px;
+  font-weight: 400;
+  font-size: 20px;
+  border-bottom: 1px solid #1e1e1e5c;
+  height: 80px;
 }
 
-.card-details {
-  display: flex;
+.payment-style input {
+  margin-right: 1rem;
+}
+
+.payment-style input:hover {
+  cursor: pointer;
+}
+.card-details .form-row {
   flex-direction: column;
 }
 
+.card-details .form-row .form-group {
+  margin-right: 0;
+}
+
+.card-details label {
+  margin-top: 1rem;
+}
+
 .order-summary {
-  flex: 1;
   background-color: #f8f8f8;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 4px;
+  width: 35%;
 }
 
 .order-items {

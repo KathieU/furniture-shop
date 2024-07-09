@@ -8,7 +8,8 @@ const Banner = ({ title, subtitle }) => {
       <div className="banner-content">
         <h1>{title}</h1>
         <p>
-          Shop /<span className="banner-subtitle">All products {subtitle}</span>
+          Shop /
+          <span className="banner-subtitle"> All products {subtitle}</span>
         </p>
       </div>
       <div className="banner-image">

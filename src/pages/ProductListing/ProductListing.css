@@ -167,7 +167,7 @@ select:focus {
   bottom: 40%;
   left: 50%;
   transform: translateX(-50%);
-  /* padding: 5px 8px; */
+
   height: 3rem;
   background-color: #ba7c34;
   color: white;
