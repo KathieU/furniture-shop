@@ -76,6 +76,10 @@ tbody td {
   font-size: 24px;
   margin-bottom: 1.5rem;
 }
+
+.cart-items {
+  display: none;
+}
 .delivery,
 .promo {
   width: 30%;
